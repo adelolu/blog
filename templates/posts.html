@@ -6,10 +6,6 @@
       * {
         box-sizing: border-box;
       }
-      a {
-        text-decoration: none;
-        color: black;
-      }
 
       body {
         font-family: Arial;
@@ -52,20 +48,16 @@
   </head>
   <body>
     <div class="header">
-      <h2>Temi's Blog</h2>
+      <h2>Tomi's Blog</h2>
     </div>
 
     <div class="row">
       <div class="leftcolumn">
-        {% for post in posts reversed %}
         <div class="card">
-          <a href="/post/{{post.id}}">
-            <h2>{{post.title}}</h2>
-            <h5>{{post.created_at}}</h5>
-            <p>{{post.body|truncatewords:10}}</p>
-          </a>
+          <h1>{{posts.title}}</h1>
+          <h5>{{posts.created_at}}</h5>
+          <p>{{posts.body}}</p>
         </div>
-        {% endfor %}
       </div>
     </div>
   </body>
